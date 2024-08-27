@@ -1,0 +1,28 @@
+documentclass: ctexbeamer
+classoption:
+  - fontset=ubuntu
+innertheme: "thubeamer"
+outertheme: "thubeamer"
+colortheme: "thubeamer"
+fonttheme: "professionalfonts"
+aspectratio: 169
+beameroption:
+  - show notes
+header-includes:
+  - \hypersetup{colorlinks, allcolors=., urlcolor=blue,}
+  - \usepackage{xeCJKfntef}
+  - \providecommand{\st}[1]{\CJKsout{#1}}
+  - \renewcommand{\st}[1]{\sout{#1}}
+  - \usepackage{fvextra}
+  - \usepackage[outputdir=tmp]{minted}
+  - \usepackage{tcolorbox}
+  - \usepackage{etoolbox}
+  - \setminted{fontsize=\footnotesize,xleftmargin=0.7em,linenos,breaklines}
+  - \renewcommand{\familydefault}{\sfdefault}
+  - \addtobeamertemplate{note page}{}{\thispdfpagelabel{notes:\insertframenumber}}
+  - \setCJKmonofont{Noto Sans Mono CJK SC}
+
+
+author: 陈晟祺
+institute: 清华大学 计算机科学与技术系
+

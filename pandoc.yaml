@@ -1,0 +1,8 @@
+standalone: true
+from: markdown
+to: beamer
+slide-level: 2
+pdf-engine: latexmk
+pdf-engine-opt:
+  - '-shell-escape'
+  - '-outdir=tmp'
