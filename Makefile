@@ -1,4 +1,4 @@
-pandoc_opt := --defaults=pandoc.yaml --metadata-file=metadata.yaml --lua-filter minted.lua
+pandoc_opt := --columns=80 --defaults=pandoc.yaml --metadata-file=metadata.yaml --lua-filter minted.lua
 
 markdown_files := $(wildcard *.md)
 pdf_files := $(patsubst %.md,%.pdf,$(markdown_files))
