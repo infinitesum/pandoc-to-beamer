@@ -20,20 +20,9 @@ header-includes:
   - \setminted{fontsize=\footnotesize,xleftmargin=0.7em,linenos,breaklines}
   - \renewcommand{\familydefault}{\sfdefault}
   - \addtobeamertemplate{note page}{}{\thispdfpagelabel{notes:\insertframenumber}}
-  - \setCJKmonofont{Noto Sans Mono CJK SC}
-  - |
-    ```{=latex}
-    \definecolor{beamer@textcolor}{RGB}{153,0,0}
-    \definecolor{beamer@headercolor}{RGB}{106,39,39}
-    \definecolor{beamer@sidebarcolor}{RGB}{173,33,36}
-    \setbeamercolor{structure}{fg=beamer@headercolor}
-    \setbeamercolor{title}{fg=white,bg=beamer@headercolor}
-    \setbeamercolor{frametitle}{fg=white,bg=beamer@headercolor}
-    \setbeamercolor{block title}{fg=white,bg=beamer@headercolor}
-    \setbeamercolor{block body}{bg=beamer@headercolor!10}
-    ```
+  - \graphicspath{{images/}{figures/}}
 
 
-author: 陈晟祺
-institute: 清华大学 计算机科学与技术系
+
+
 

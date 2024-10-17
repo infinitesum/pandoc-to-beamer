@@ -1,3 +1,9 @@
 *.pdf
 *.tex
 tmp/
+cheatsheet.md
+Screenshot-2024-07-17-at-19.53.04@2x.png
+Screenshot-2024-07-17-at-21.16.17@2x.png
+add_allowframebreaks.lua
+stata.md
+stata-incremental.md

@@ -1,0 +1,74 @@
+from: markdown
+verbosity: WARNING
+
+variables:
+  documentclass: ctexart # 使用支持中文的 LaTeX 文档类
+  classoption:
+    - fontset=windows # 如果使用 macOS 或 Linux，可以改成 ubuntu 或 mac
+    - zihao=5
+  geometry:
+    - a4paper
+    - top=2.54cm
+    - bottom=2.54cm
+    - left=3.18cm
+    - right=3.18cm
+  indent: yes
+  numbersections: yes
+  header-includes: |
+    \usepackage{graphicx}
+    \usepackage{booktabs}
+    \usepackage{multirow}
+    \usepackage{rotating}
+    \usepackage{pdflscape}
+    \usepackage{xcolor}
+    \usepackage{caption}
+    \usepackage{unicode-math}
+    \usepackage{fancyhdr}
+    \usepackage{listings}
+    \setCJKmainfont{SimSun}   % 指定中文主字体，如宋体
+    \setCJKsansfont{Noto Sans CJK SC} % 无衬线中文字体
+    \setCJKmonofont{Noto Sans Mono CJK SC}  % 等宽字体
+
+    \usepackage[outputdir=tmp]{minted}
+    \usemintedstyle{manni}
+
+
+    \usepackage{xeCJKfntef}
+    \providecommand{\st}[1]{\CJKsout{#1}}
+    \renewcommand{\st}[1]{\sout{#1}}
+
+    \newcommand{\cmd}[1]{\texttt{#1}}
+    \newcommand{\env}[1]{\textbf{#1}}
+
+    \graphicspath{{images/}{figures/}}
+
+    \definecolor{codegreen}{rgb}{0,0.6,0}
+    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    \pagestyle{plain}
+    \lstset{
+      commentstyle=\color{codegreen},
+      keywordstyle=\color{magenta},
+      numberstyle=\tiny\color{codegray},
+      stringstyle=\color{codepurple},
+      basicstyle=\ttfamily,
+      prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+      columns=fullflexible,
+      keepspaces=true,
+      showspaces=false,
+      showtabs=false,
+      breaklines=true,
+      showstringspaces=false,
+      breakatwhitespace=true,
+      % frame=single,
+      framesep=3pt,
+      xleftmargin=12pt,
+      tabsize=4,
+      captionpos=b,
+      numbers=left
+    }
+
+pdf-engine: xelatex
+pdf-engine-opt: ["-shell-escape"]
+standalone: true
+listings: true
